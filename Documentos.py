@@ -1,6 +1,6 @@
 from abc import ABC, abstractmethod
 from typing import List
-from enumerations import Formatos
+from enumerations import Formatos, CategoriaI
 class Documentos(ABC):
     __Anno: int
     __Autores: List[str]
@@ -10,22 +10,37 @@ class Documentos(ABC):
     __isbn: str
     __paginas: int
     __titulo: str
+    __Categoria: CategoriaI
 
-
-    def __init__(self, **kwargs):
-        self.__Anno = kwargs['Anno']
-        self.__Autores = kwargs['Autores']
-        self.__Edicion = kwargs['Edicion']
-        self.__Formatos= kwargs['Formatos']
-        self.__Idiomas= kwargs['Idiomas']
-        self.__isbn= kwargs['Isbn']
-        self.__paginas= kwargs['Paginas']
-        self.__titulo= kwargs['titulo']
+    def __init__(self, Anno: int, Autores: List[str], Edicion: str, Formatos: List[Formatos], Idiomas: List[str], Isbn: str,Paginas: int, Titulo: str):
         
+        self.__Anno = Anno
+        self.__Autores = Autores
+        self.__Edicion = Edicion
+        self.__Formatos= Formatos
+        self.__Idiomas= Idiomas
+        self.__isbn= Isbn
+        self.__paginas= Paginas
+        self.__titulo= Titulo
+        
+    
     def Documentos(self):
         pass
-    @abstractmethod
-    def categoria(self)->str:
+    
+    def categoria(self, categoria):
+        self.__Categoria= categoria
+        
+    
+    def getCategoria(self):
+        return self.__Categoria
+        
+    def __str__(self):
+        return  f"nombre: {self.__Anno}, edicion: {self.__Edicion}, titulo: {self.__titulo},"
+    
+    
+    def __eq__(self, __o: object) -> bool:
         pass
-
+    
+    def __hash__(self) -> int:
+        return super().__hash__()
 

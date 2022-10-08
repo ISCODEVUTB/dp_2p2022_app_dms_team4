@@ -3,5 +3,7 @@ from Revista import Revista
 
 class RevistaFactory(DocumentAbstracbFactory):
 
-    def crearDocumento(self, **kwargs):
-        return Revista(**kwargs)
+    def __init__(self):
+        pass
+    def crearDocumento(self,Anno, Autores, Edicion, Formatos, Idiomas, Isbn,Paginas,Titulo):
+        return Revista(Anno, Autores, Edicion, Formatos, Idiomas, Isbn,Paginas,Titulo)

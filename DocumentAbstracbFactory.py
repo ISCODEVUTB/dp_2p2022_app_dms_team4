@@ -4,7 +4,7 @@ from Documentos import Documentos
 class DocumentAbstracbFactory(ABC):
 
     @abstractmethod
-    def crearDocumento(**kwargs) -> Documentos:
+    def crearDocumento(self):
         pass
 
     
