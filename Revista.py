@@ -1,12 +1,12 @@
 from typing import List
 from Documentos import Documentos
 from IOnline import IOnline
-from enumerations import Formatos, CategoriaI
+from enumerations import formats, CategoriaI
 
 class Revista(Documentos, IOnline):
 
-    def __init__(self, Anno: int, Autores: List[str], Edicion: str, Formatos: List[Formatos], Idiomas: List[str], Isbn: str,Paginas: int, Titulo: str):
-        super().__init__(Anno, Autores, Edicion, Formatos, Idiomas, Isbn,Paginas,Titulo)
+    def __init__(self, yearn: int, authors: List[str], edition: str, formats: List[formats], languages: List[str], isbn: str,pages: int, titles: str):
+        super().__init__(yearn, authors, edition, formats, languages, isbn,pages,titles)
 
     def itemOnline(self) -> str:
         return "Soy una Revista Online"

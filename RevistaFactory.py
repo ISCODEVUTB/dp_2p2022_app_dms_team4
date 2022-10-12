@@ -5,5 +5,5 @@ class RevistaFactory(DocumentAbstracbFactory):
 
     def __init__(self):
         pass
-    def crearDocumento(self,Anno, Autores, Edicion, Formatos, Idiomas, Isbn,Paginas,Titulo):
-        return Revista(Anno, Autores, Edicion, Formatos, Idiomas, Isbn,Paginas,Titulo)
+    def crearDocumento(self,yearn, authors, edition, formats, languages, isbn,pages,titles):
+        return Revista(yearn, authors, edition, formats, languages, isbn,pages,titles)
