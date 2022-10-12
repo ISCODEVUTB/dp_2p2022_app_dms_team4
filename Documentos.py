@@ -1,27 +1,27 @@
 from abc import ABC, abstractmethod
 from typing import List
-from enumerations import Formatos, CategoriaI
+from enumerations import formats, CategoriaI
 class Documentos(ABC):
-    __Anno: int
-    __Autores: List[str]
-    __Edicion: str
-    __Formatos: List[Formatos]
-    __Idiomas: List[str]
+    __yearn: int
+    __authors: List[str]
+    __edition: str
+    __formats: List[formats]
+    __languages: List[str]
     __isbn: str
-    __paginas: int
-    __titulo: str
+    __pages: int
+    __titles: str
     __Categoria: CategoriaI
 
-    def __init__(self, Anno: int, Autores: List[str], Edicion: str, Formatos: List[Formatos], Idiomas: List[str], Isbn: str,Paginas: int, Titulo: str):
+    def __init__(self, yearn: int, authors: List[str], edition: str, formats: List[formats], languages: List[str], isbn: str,pages: int, titles: str):
         
-        self.__Anno = Anno
-        self.__Autores = Autores
-        self.__Edicion = Edicion
-        self.__Formatos= Formatos
-        self.__Idiomas= Idiomas
-        self.__isbn= Isbn
-        self.__paginas= Paginas
-        self.__titulo= Titulo
+        self.__yearn = yearn
+        self.__authors = authors
+        self.__edition = edition
+        self.__formats= formats
+        self.__languages= languages
+        self.__isbn= isbn
+        self.__pages= pages
+        self.__titles= titles
         
     
     def Documentos(self):
@@ -35,7 +35,7 @@ class Documentos(ABC):
         return self.__Categoria
         
     def __str__(self):
-        return  f"nombre: {self.__Anno}, edicion: {self.__Edicion}, titulo: {self.__titulo},"
+        return  f"nombre: {self.__yearn}, edition: {self.__edition}, titles: {self.__titles},"
     
     
     def __eq__(self, __o: object) -> bool:

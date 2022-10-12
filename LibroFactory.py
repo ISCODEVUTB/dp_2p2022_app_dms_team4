@@ -3,5 +3,5 @@ from Libro import Libro
 
 class LibroFactory(DocumentAbstracbFactory):
 
-    def crearDocumento(self, Anno, Autores, Edicion, Formatos, Idiomas, Isbn,Paginas,Titulo):
-        return Libro(Anno, Autores, Edicion, Formatos, Idiomas, Isbn,Paginas,Titulo)
+    def crearDocumento(self, yearn, authors, edition, formats, languages, isbn,pages,titles):
+        return Libro(yearn, authors, edition, formats, languages, isbn,pages,titles)

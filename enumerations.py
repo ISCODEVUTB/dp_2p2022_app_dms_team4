@@ -1,7 +1,7 @@
 from enum import Enum
 
 
-class Formatos(Enum):
+class formats(Enum):
     IMPRESO = 'IMPRESO'
     DIGITAL = "DIGITAL"
     AUDIO = "AUDIO"

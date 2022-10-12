@@ -3,15 +3,15 @@ from enumerations import *
 from RevistaFactory import RevistaFactory
 def Cliente(factory: DocumentAbstracbFactory):
 
-    factory_product = factory.crearDocumento(2001,["Juan Perez"],"LAPORTE",Formatos.DIGITAL,["Español"],"NOSE",192,"Fundamento Algoritmo")
+    factory_product = factory.crearDocumento(2001,["Juan Perez"],"LAPORTE",formats.DIGITAL,["Español"],"NOSE",192,"Fundamento Algoritmo")
 
     return factory_product
 
-datos_1 = {'Anno': 2001,
-"Autores": ['Juan Daniel','Gian Valdiris'],
-"Edicion": "LAPORTE","Idiomas":["Español"],
-"Isbn":"NOSE",
-"Paginas": 500,
-"Titulo":"Cincuenta algoritmos profesionales", 
-"Formatos": [Formatos.AUDIO, Formatos.DIGITAL]}
+datos_1 = {'yearn': 2001,
+"authors": ['Juan Daniel','Gian Valdiris'],
+"edition": "LAPORTE","languages":["Español"],
+"isbn":"NOSE",
+"pages": 500,
+"titles":"Cincuenta algoritmos profesionales", 
+"formats": [formats.AUDIO, formats.DIGITAL]}
 
